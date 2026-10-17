@@ -42,7 +42,7 @@ use SugarCraft\Pty\PumpOptions;
  * SignalForwarder, and ext-pcntl is not guaranteed to be loaded.
  *
  * Naming follows the house `React*` prefix for event-loop adapters
- * (candy-input `ReactInputDriver`, candy-sql `ReactMysqlConnection`).
+ * (sugar-input `ReactInputDriver`, candy-sql `ReactMysqlConnection`).
  *
  * Implements plan item 8.1 (findings/plan_sugar-pty.md).
  *
@@ -182,7 +182,7 @@ final class ReactPump
      * Start pumping. Parameter order mirrors {@see PosixPump::run()};
      * `$stdinStream` and `$stdoutStream` are optional here so callers
      * can consume master output purely through `$onData` (e.g. feeding
-     * a candy-vt Terminal) without wiring host stdio.
+     * a sugar-vterm Terminal) without wiring host stdio.
      *
      * The pump is single-flight: calling start() while a previous run
      * is still active throws.
